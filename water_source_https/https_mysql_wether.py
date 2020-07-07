@@ -21,7 +21,7 @@ class requestHandler(BaseHTTPRequestHandler):
         req = json.loads(req)
 
         location = 'Sjöbo,SE' #location of weather station
-        owm = OWM('e2bc44778d5f1c9c0cdc7177e10c2e8e')   #api key for open weather api
+        owm = OWM('your api key here')   #api key for open weather api
 
         #init and get an wether observation
         mgr = owm.weather_manager()
