@@ -28,9 +28,9 @@ class requestHandler(BaseHTTPRequestHandler):
         req = json.loads(req)
         #print(req)
         if int(req["payload_fields"]["sensor_trigger"]) == 1:
-            client = Client("ACfce62142ff5d83bf280a7eac274f45d8", "a4e4271930345f4db976d1485f38cdab")
-            client.messages.create(to="+46704911238",
-                        from_="+16193500841",
+            client = Client("Twilio Account SID", "Auth Token")
+            client.messages.create(to="phone number",
+                        from_="generated phone number",
                         body=f'Animal in at device { req["dev_id"] } was triggered.')
 
 def main():
