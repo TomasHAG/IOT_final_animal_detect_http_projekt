@@ -1,0 +1,13 @@
+function Decoder(bytes, port) {
+  var decoded = {};
+
+  if (port === 2){
+    decoded.sensor_trigger = 1;
+    decoded.pin_activ = "P" + str( int(bytes) )
+  }
+  if (port === 3){
+    decoded.sensor_trigger = 0;
+  }
+
+  return decoded;
+}
